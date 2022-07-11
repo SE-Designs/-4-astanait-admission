@@ -30,13 +30,16 @@ i {
 /* TOP NAV */
 
 .top-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 70px;
     background-color: var(--main-color);
 }
+
+    .desk-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 70px;
+    }
 
     .top-nav a {
         font-size: 1em;
@@ -64,6 +67,92 @@ i {
         position: absolute;
         top: 70px;
     }
+
+    .mobile-menu {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+        height: 70px;
+    }
+
+    .mobile-nav {
+        position: relative;
+        left: 0;
+        background-color: #000000;
+        height: calc(100vh - 70px);
+        overflow-x: hidden;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        width: 70%;
+        min-width: 240px;
+        padding: 10px;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+        .mobile-nav a {
+            margin: 10px 20px;
+        }
+
+        .mobile-nav a::before {
+            content: "•";
+            margin-right: 8px;
+        }
+
+        .burger {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            transition: all .5s ease;
+            margin: 1em;
+        }
+
+        .burger:hover {
+            background-color: #19e1fc;
+        }
+
+        .burger-strip {
+            transition: all .5s ease;
+        }
+
+        .strip div {
+            height: 4px;
+            border-radius: 4px;
+            background: #0e55cb;
+            margin: 4px;
+            transition: all .55s cubic-bezier(0.075, 0.82, 0.165, 1);
+            width: 26px;
+        }
+
+        .burger:hover .strip div {
+            background: white;
+        }
+
+        .burger-strip div:first-child {
+            width: 12px;
+        }
+
+        .burger-strip div:last-child {
+            width: 20px;
+        }
+
+        .burger-active .burger-strip div:first-child {
+            transform: rotate(45deg) translateY(1px) translateX(4px);
+        }
+        .burger-active .burger-strip div:nth-child(2) {
+            transform: rotate(-45deg);
+        }
+        .burger-active .burger-strip div:last-child {
+            transform: rotate(45deg) translateY(-7.5px) translateX(1px);
+        }
 
 .hero-container {
     width: 100%;
@@ -390,6 +479,14 @@ footer {
 }
 
 @media only screen and (max-width: 1120px) {
+    .desk-menu {
+        display: none;
+    }
+    
+    .mobile-menu {
+        display: flex;
+    }
+    
     .hero-container {
         height: fit-content;
     }

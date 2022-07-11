@@ -15,20 +15,44 @@
 <body>
     <header>
         <nav class="top-nav">
-            <a href="#"><img src="assets/aitu-logo_white.png" alt="aitu-logo" width="90px" height="45px"></a>
-            <a href="#">About</a>
-            <a href="#">Specialities</a>
-            <a href="#">Important Dates</a>
-            <a href="#">How to Proceed</a>
-            <a href="#">Grants</a>
-            <a href="#">FAQ</a>
-            <a href="#">AET Exam</a>
-            <a href="#">Contacts</a>
-            <a href="#">KZ</a>
-            <a href="#">RU</a>
+            <div class="desk-menu">
+                <a href="#"><img src="assets/aitu-logo_white.png" alt="aitu-logo" width="90px" height="45px"></a>
+                <a href="#">About</a>
+                <a href="#">Specialities</a>
+                <a href="#">Important Dates</a>
+                <a href="#">How to Proceed</a>
+                <a href="#">Grants</a>
+                <a href="#">FAQ</a>
+                <a href="#">AET Exam</a>
+                <a href="#">Contacts</a>
+                <a href="#">KZ</a>
+                <a href="#">RU</a>
+            </div>
+            <div class="mobile-menu">
+                <a href="#"><img src="assets/aitu-logo_white.png" alt="aitu-logo" width="90px" height="45px"></a>
+                <div class="burger" id="burger" onclick="toggleMobileMenu()">
+                    <div class="strip burger-strip">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-nav" id="mobile-nav">
+                <a href="#">About</a>
+                <a href="#">Specialities</a>
+                <a href="#">Important Dates</a>
+                <a href="#">How to Proceed</a>
+                <a href="#">Grants</a>
+                <a href="#">FAQ</a>
+                <a href="#">AET Exam</a>
+                <a href="#">Contacts</a>
+                <a href="#">KZ</a>
+                <a href="#">RU</a>
+            </div>
         </nav>
         <hr class="top-nav-hr">
-        <div class="hero-container">
+        <div class="hero-container" id="hero">
             <section class="hero-section">
                 <section class="hero-headline">
                     <h1>Become a part of the digital history of your country together with Astana IT University</h1>
@@ -49,7 +73,7 @@
             </section>
         </div>
     </header>
-    <section class="main">
+    <section class="main" id="main">
         <section class="cards-section">
             <div class="cards">
                 <a href="#">
@@ -217,7 +241,7 @@
             </div>
         </section>
     </section>
-    <footer>
+    <footer id="footer">
         <div class="footer">
             <section class="footer-text">
                 <div class="footer-headline-1">
