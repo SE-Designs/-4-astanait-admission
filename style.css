@@ -16,6 +16,10 @@ h1, h2, h3, h4, h5, h6, p, a, span {
     text-decoration: none;
 }
 
+a:active {
+    color: #19e1fc;
+}
+
 i {
     font-size: 0.875em;
 }
@@ -78,6 +82,7 @@ i {
     }
 
     .mobile-nav {
+        display: none;
         position: relative;
         left: 0;
         background-color: #000000;
@@ -88,11 +93,13 @@ i {
         width: 70%;
         min-width: 240px;
         padding: 10px;
-        display: flex;
         flex-flow: column nowrap;
+
+        transition: all .25s;
     }
 
         .mobile-nav a {
+            width: fit-content;
             margin: 10px 20px;
         }
 
@@ -101,11 +108,23 @@ i {
             margin-right: 8px;
         }
 
+        .mobile-nav span {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.8em;
+            width: fit-content;
+            margin: 10px 20px;
+            font-variant: small-caps;
+            font-style: italic;
+            text-shadow: 2px 0 0 #0e55cb;
+        }
+
         .burger {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            background: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            border: 2px solid #ffffff;
+            background: transparent;
             cursor: pointer;
             display: flex;
             justify-content: center;
@@ -116,7 +135,7 @@ i {
         }
 
         .burger:hover {
-            background-color: #19e1fc;
+            border-color: #19e1fc;
         }
 
         .burger-strip {
@@ -124,12 +143,12 @@ i {
         }
 
         .strip div {
-            height: 4px;
+            height: 2.5px;
             border-radius: 4px;
-            background: #0e55cb;
+            background: #ffffff;
             margin: 4px;
             transition: all .55s cubic-bezier(0.075, 0.82, 0.165, 1);
-            width: 26px;
+            width: 20px;
         }
 
         .burger:hover .strip div {
@@ -140,19 +159,9 @@ i {
             width: 12px;
         }
 
-        .burger-strip div:last-child {
-            width: 20px;
-        }
-
-        .burger-active .burger-strip div:first-child {
-            transform: rotate(45deg) translateY(1px) translateX(4px);
-        }
-        .burger-active .burger-strip div:nth-child(2) {
-            transform: rotate(-45deg);
-        }
-        .burger-active .burger-strip div:last-child {
-            transform: rotate(45deg) translateY(-7.5px) translateX(1px);
-        }
+        .burger-active .burger-strip div:first-child { transform: rotate(45deg) translateY(2.2px) translateX(3px); }
+        .burger-active .burger-strip div:nth-child(2) { transform: rotate(-45deg); }
+        .burger-active .burger-strip div:last-child { transform: rotate(45deg) translateY(-4px) translateX(-4px); }
 
 .hero-container {
     width: 100%;
@@ -245,8 +254,8 @@ i {
                 width: 30%;
                 height: auto;
                 position: absolute;
-                top: 0;
-                right: 0;
+                top: 80px;
+                right: 40px;
                 animation: circle 30s infinite linear;
             }
 
@@ -334,6 +343,94 @@ i {
             transition: all 1s;
         }
 
+.dates-container {
+    width: 80%;
+    margin: 40px auto 80px;
+    font-size: 1.5em;
+}
+
+    .dates-container h3 {
+        font-size: 1.5em;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+
+    .date-table {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .date-table span {
+        font-size: 0.75em;
+        flex: 1 0 50%;
+        padding: 12px 12px 12px 0;
+
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    }
+
+    .date-table span:nth-child(1), .date-table span:nth-child(2) {
+        font-weight: 700;
+    }
+
+    /* .date-table span:nth-child(9), .date-table span:last-child {
+        border-bottom: 0;
+    } */
+
+.pre-faq {
+    width: 80%;
+    margin: 0 auto;
+}
+
+    .pre-faq-container {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .pre-faq-container h2 {
+        display: block;
+        width: 70%;
+        text-align: center;
+        font-weight: 700;
+        margin: 0 auto 20px;
+        font-size: 2.25em;
+    }
+
+    .pre-faq-container p {
+        display: block;
+        width: 80%;
+        text-align: center;
+        margin: 0 auto 40px;
+        font-size: 1.5em;
+    }
+
+    .pre-faq ul {
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+
+    .pre-faq li {
+        font-size: 0.875em;
+    }
+
+.documents-container {
+    width: 80%;
+    margin: 80px auto;
+}
+
+    .documents-container h3 {
+        font-size: 2em;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .documents-container ol {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: italic;
+        list-style: decimal;
+        list-style-position: inside;
+        line-height: 1.5;
+    }
+
 .faq-container {
     display: flex;
     flex-flow: column nowrap;
@@ -350,22 +447,25 @@ i {
     }
 
     .faq-answ {
+        cursor: pointer;
         display: none;
     }
 
     .faq-element h4 {
-        font-size: 1.5em;
+        font-size: 1.25em;
         font-weight: 700;
         align-self: center;
     }
 
     .faq-element i {
+        display: inline-block;
+        height: 1em;
         font-size: 2em;
         border-radius: 20%;
         transition: all .45s;
     }
 
-    .faq-container hr {
+    .faq-container hr, .pre-faq-container hr {
         width: 100%;
         margin: 0;
         background-color: rgba(0, 0, 0, 0.5);
@@ -446,12 +546,6 @@ footer {
         align-self: center;
     }
 
-        .map-container img {
-            width: 100%;
-            height: auto;
-            max-width: 800px;
-        }
-
     .social {
         display: flex;
         flex-flow: row wrap;
@@ -476,6 +570,25 @@ footer {
         display: flex;
         justify-content: center;
     }
+
+    
+    .footer {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+
+        .footer-text {
+            text-align: center;
+            width: 100%;
+            height: 400px;
+            padding: 40px 0;
+        }
+
+        .map-container {
+            width: 90%;
+            margin: 0 auto;
+        }
 }
 
 @media only screen and (max-width: 1120px) {
@@ -514,21 +627,25 @@ footer {
             height: auto;
             margin: 20px auto;
         }
+
+    .circle {
+        top: 20px;
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 1020px) {   
+    .faq-container {
+        width: 80%;
+        margin: 40px auto;
+    }
+
+    body {
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width: 840px) {
-    .footer {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-    }
-
-    .footer-text {
-        width: 100%;
-        height: 400px;
-        padding: 40px 0;
-    }
-
     .map-container {
         width: 100%;
     }
