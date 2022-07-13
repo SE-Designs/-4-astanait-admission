@@ -11,7 +11,7 @@ body {
     font-size: 16px;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, span {
+h1, h2, h3, h4, h5, h6, p, a, span, button {
     font-family: 'Ubuntu', sans-serif;
     text-decoration: none;
 }
@@ -378,7 +378,7 @@ i {
 
 .pre-faq {
     width: 80%;
-    margin: 0 auto;
+    margin: 80px auto;
 }
 
     .pre-faq-container {
@@ -411,6 +411,88 @@ i {
     .pre-faq li {
         font-size: 0.875em;
     }
+
+.steps {
+    width: 100%;
+    background-color: #0e55cb;
+}
+
+.steps-container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+
+    padding: 80px 0;
+}
+
+    .steps-item {
+        margin: 0 20px;
+    }
+
+    .steps-container img {
+        width: 60%;
+        height: auto;
+        border-radius: 20px;
+        max-width: 1200px;
+    }
+
+    .steps-container h2 {
+        width: 30%;
+        height: fit-content;
+        font-size: 42px;
+        font-weight: 700;
+        color: #ffffff;
+    }
+
+    .main-steps {
+        width: 100%;
+        margin: 40px 20px;
+    }
+
+        .main-steps-subitem {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #ffffff;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .steps-subitem-num {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            margin: 4px 4px 4px 0;
+            color: #0e55cb;
+            border-radius: 25%;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .main-steps-subitem button {
+            text-transform: uppercase;
+            margin: 2px 0;
+            padding: 3px 6px;
+            font-weight: 700;
+            /* color: rgba(0, 0, 0, 0.8); */
+            color: #19e1fc;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            background-color: #000000;
+            cursor: pointer;
+
+            transition: all .5s;
+        }
+
+        .main-steps-subitem button:hover {
+            border: 2px solid #ffffff;
+        }
+
+        .main-steps-subitem button:active {
+            border: 2px solid #19e1fc;
+        }
 
 .documents-container {
     width: 80%;
@@ -631,6 +713,20 @@ footer {
     .circle {
         top: 20px;
         right: 0;
+    }
+
+    .steps-container img {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .steps-container h2 {
+        width: 80%;
+        text-align: center;
+    }
+
+    .steps-subitem-num {
+        padding-top: 2px;
     }
 }
 
