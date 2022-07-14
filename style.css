@@ -16,6 +16,10 @@ h1, h2, h3, h4, h5, h6, p, a, span, button {
     text-decoration: none;
 }
 
+a {
+    color: #0e55cb;
+}
+
 a:active {
     color: #19e1fc;
 }
