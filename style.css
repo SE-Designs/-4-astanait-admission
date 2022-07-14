@@ -259,6 +259,45 @@ i {
                 animation: circle 30s infinite linear;
             }
 
+    .hero-action {
+        background-color: #0e55cb;
+    }
+    
+        .hero-action-container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            width: 60%;
+            margin: 0 auto;
+            padding: 0 0 80px;
+        }
+
+            .hero-action-container h2 {
+                width: 90%;
+                text-align: center;
+                color: #ffffff;
+                font-size: 3em;
+                font-weight: 800;
+            }
+
+            .btn-hero-main {
+                font-size: 1.25em;
+                border: 3px solid #ffffff;
+                border-radius: 8px;
+                color: #0e55cb;
+                font-weight: 800;
+                background-color: #ffffff;
+                padding: 4px 12px;
+                margin: 20px;
+                cursor: pointer;
+                transition: all .5s;
+            }
+
+            .btn-hero-main:hover {
+                color: #ffffff;
+                background-color: transparent;
+            }
+
             @keyframes circle {
                 from{ transform: rotate(-360deg); }
                 to{ transform: rotate(360deg); }
@@ -448,7 +487,7 @@ i {
     }
 
     .main-steps {
-        width: 100%;
+        width: 60%;
         margin: 40px 20px;
     }
 
@@ -473,21 +512,22 @@ i {
 
         .main-steps-subitem button {
             text-transform: uppercase;
-            margin: 2px 0;
-            padding: 3px 6px;
+            margin: 4px 0;
+            padding: 4px 6px;
             font-weight: 700;
             /* color: rgba(0, 0, 0, 0.8); */
-            color: #19e1fc;
-            border: 2px solid #000000;
+            color: #000000;
+            border: 3px solid #ffffff;
             border-radius: 4px;
-            background-color: #000000;
+            background-color: #ffffff;
             cursor: pointer;
 
             transition: all .5s;
         }
 
         .main-steps-subitem button:hover {
-            border: 2px solid #ffffff;
+            color: #0e55cb;
+            border: 3px solid #19e1fc;
         }
 
         .main-steps-subitem button:active {
