@@ -386,6 +386,67 @@ i {
             transition: all 1s;
         }
 
+.advantages-container {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    background: center / contain url("assets/adv-back.svg") no-repeat;
+}
+
+    .main-advantages-container {
+        display: flex;
+        flex-flow: row wrap;
+        width: 70%;
+    }
+
+        .advantages-cards {
+            position: relative;
+            width: 40%;
+            padding: 80px 40px 40px 40px;
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.36);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(16.4px);
+            margin: 40px;
+        }
+
+        .in-card {
+            font-size: 2em;
+            font-weight: 800;
+        }
+
+        .out-card {
+            position: absolute;
+            top: -40px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+        }
+
+    .aside-advantages-container {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        padding: 10px;
+    }
+
+        .aside-advantages-container h3 {
+            font-size: 2em;
+            font-weight: 800;
+            margin-bottom: 40px;
+        }
+
+        .advantages-logo {
+            margin: 20px;
+            justify-self: center;
+        }
+
 .dates-container {
     width: 80%;
     margin: 40px auto 80px;
@@ -530,12 +591,11 @@ i {
         }
 
         .main-steps-subitem button:hover {
-            color: #0e55cb;
             border: 3px solid #19e1fc;
         }
 
         .main-steps-subitem button:active {
-            border: 2px solid #19e1fc;
+            color: #0e55cb;
         }
 
 .documents-container {
@@ -675,7 +735,7 @@ footer {
     .social {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
         width: 30%;
         min-width: 360px;
         margin: 40px auto;
@@ -713,6 +773,27 @@ footer {
 
         .map-container {
             width: 90%;
+            margin: 0 auto;
+        }
+
+    .advantages-container {
+        flex-flow: column wrap;
+    }
+
+        .main-advantages-container {
+            width: 80%;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .advantages-cards {
+            width: 40%;
+            min-width: 240px;
+        }
+
+        .aside-advantages-container {
+            flex-flow: row wrap;
+            width: 80%;
             margin: 0 auto;
         }
 }
