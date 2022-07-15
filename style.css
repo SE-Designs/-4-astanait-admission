@@ -590,10 +590,6 @@ i {
             transition: all .5s;
         }
 
-        .main-steps-subitem button:hover {
-            border: 3px solid #19e1fc;
-        }
-
         .main-steps-subitem button:active {
             color: #0e55cb;
         }
