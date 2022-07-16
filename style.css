@@ -11,7 +11,7 @@ body {
     font-size: 16px;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, span, button {
+h1, h2, h3, h4, h5, h6, p, a, span, button, table {
     font-family: 'Ubuntu', sans-serif;
     text-decoration: none;
 }
@@ -163,9 +163,9 @@ i {
             width: 12px;
         }
 
-        .burger-active .burger-strip div:first-child { transform: rotate(45deg) translateY(2.2px) translateX(3px); }
+        .burger-active .burger-strip div:first-child { transform: rotate(45deg) translateY(1.7px) translateX(3px); }
         .burger-active .burger-strip div:nth-child(2) { transform: rotate(-45deg); }
-        .burger-active .burger-strip div:last-child { transform: rotate(45deg) translateY(-4px) translateX(-4px); }
+        .burger-active .burger-strip div:last-child { transform: rotate(45deg) translateY(-4.5px) translateX(-4.5px); }
 
 .hero-container {
     width: 100%;
@@ -389,7 +389,7 @@ i {
 .advantages-container {
     display: flex;
     width: 80%;
-    margin: 0 auto;
+    margin: 40px auto;
     justify-content: space-evenly;
     background: center / contain url("assets/adv-back.svg") no-repeat;
 }
@@ -446,6 +446,73 @@ i {
             margin: 20px;
             justify-self: center;
         }
+
+.educational-programs-container {
+    width: 80%;
+    margin: 120px auto;
+    text-align: center;
+}
+
+    .educational-programs-container h2 {
+        font-size: 2em;
+        font-weight: 800;
+    }
+
+    .educational-programs-container span {
+        display: block;
+        margin: 20px;
+    }
+
+    /* TABLE */
+
+        .educational-programs-container th {
+            font-size: 1.25em;
+            color: #fff;
+            background-color: #0e55cb;
+            padding: 4px 2px;
+            border: 2px solid #0e55cb;
+            vertical-align: middle;
+        }
+
+        .educational-programs-container td {
+            border: 2px solid #0e55cb;
+            vertical-align: middle;
+            padding: 8px 0;
+        }
+
+        .educational-programs-container td:nth-child(3) {
+            padding: 0;
+        }
+
+        .educational-programs-container table span {
+            text-align: center;
+            margin: 0;
+            padding: 10px;
+            border-bottom: 2px solid #0e55cb;
+        }
+
+        .educational-programs-container table span:last-child {
+            margin-bottom: 0;
+            border-bottom: 0 solid #0e55cb;
+        }
+
+        .educational-programs-container table {
+            width: 100%;
+        }
+
+        .educational-programs-container ol {
+            text-align: left;
+            margin-left: 10%;
+            list-style-position: inside;
+            list-style-type: decimal;
+        }
+
+        .educational-programs-container img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+
 
 .dates-container {
     width: 80%;
@@ -865,6 +932,14 @@ footer {
 @media only screen and (max-width: 840px) {
     .map-container {
         width: 100%;
+    }
+
+    .educational-programs-container table {
+        display: none;
+    }
+
+    .educational-programs-container img {
+        display: block;
     }
 }
 
