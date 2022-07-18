@@ -35,3 +35,10 @@ answers.forEach((event) => {
     }
   });
 });
+
+
+// MODAL:
+function closeModal() {
+  document.getElementById("modal-form").style.display = "none";
+  document.body.style.overflowY = "auto";
+}
