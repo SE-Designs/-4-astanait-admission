@@ -36,9 +36,13 @@ answers.forEach((event) => {
   });
 });
 
-
 // MODAL:
-function closeModal() {
-  document.getElementById("modal-form").style.display = "none";
-  document.body.style.overflowY = "auto";
-}
+let modalFormContainer = document.getElementById("modal-form-container");
+document.getElementById("modal-form").addEventListener('click', function (event) {
+    if (modalFormContainer.contains(event.target)) {
+      console.log('clicked inside');
+    } else {
+      document.getElementById("modal-form").style.display = "none";
+      document.body.style.overflowY = "auto";
+    }
+});
