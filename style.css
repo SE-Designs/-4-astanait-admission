@@ -123,9 +123,9 @@ i {
         .mobile-nav span {
             color: #ffffff;
             font-weight: 700;
-            font-size: 0.8em;
+            font-size: 1.2em;
             width: fit-content;
-            margin: 10px 20px;
+            margin: 20px 20px 10px;
             font-variant: small-caps;
             font-style: italic;
             text-shadow: 2px 0 0 #0e55cb;
@@ -849,6 +849,7 @@ footer {
     flex-flow: column nowrap;
     align-items: center;
     width: 50%;
+    max-width: 1600px;
     margin: 80px auto;
     min-width: 400px;
     border: 2px solid #fff;
@@ -863,12 +864,14 @@ footer {
         font-size: 2em;
         font-weight: 800;
         display: flex;
+        justify-content: center;
         color: #fff;
         background-color: #0e55cb;
     }
 
         .modal-header img {
             min-width: 200px;
+            max-width: 600px;
             padding: 10px 30px 10px 10px;
             width: 100%;
             height: auto;
@@ -1085,5 +1088,18 @@ footer {
     .social {
         width: 80%;
         min-width: 200px;
+    }
+
+    .modal-form-container img {
+        display: none;
+    }
+
+    .modal-form-container {
+        width: 80%;
+        min-width: 0;
+    }
+
+    .modal-body__form {
+        width: 80%;
     }
 }
