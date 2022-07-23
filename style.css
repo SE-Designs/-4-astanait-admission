@@ -316,7 +316,7 @@ i {
             }
 
 .process-container {
-    margin: 80px 0;
+    margin: 80px 0 40px;
 }
 
 .process-container h2 {
@@ -336,6 +336,7 @@ i {
 
     .process-flexbox {
         flex: 5 0 40%;
+        margin: 20px 0;
         text-align: center;
     }
 
@@ -1143,6 +1144,18 @@ footer {
 
     .educational-programs-container img {
         display: block;
+    }
+
+    .process-container-wrapper {
+        flex-flow: column;
+    }
+
+    .process-progress { 
+        display: none;
+    }
+
+    .process-flexbox-empty {
+        display: none;
     }
 }
 
