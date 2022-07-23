@@ -1,3 +1,5 @@
+'use strict';
+
 // MOBILE MENU:
 function toggleMobileMenu() {
   let mobileNav = document.getElementById("mobile-nav");
