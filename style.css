@@ -5,7 +5,10 @@
 body {
     display: flex;
     flex-direction: column;
+    /* FOR IE */
     background-color: #ffffff;
+    /* OTHERS */
+    background-color: var(--white-color);
     margin: 0;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -18,11 +21,17 @@ h1, h2, h3, h4, h5, h6, p, a, span, button, table {
 }
 
 a {
+    /* FOR IE */
     color: #0e55cb;
+    /* OTHERS */
+    color: var(--main-color);
 }
 
 a:active {
+    /* FOR IE */
     color: #19e1fc;
+    /* OTHERS */
+    color: var(--second-color);
 }
 
 i {
@@ -46,6 +55,9 @@ i {
 /* TOP NAV */
 
 .top-nav {
+    /* FOR IE */
+    background-color: #0e55cb;
+    /* OTHERS */
     background-color: var(--main-color);
 }
 
@@ -135,7 +147,11 @@ i {
             width: 32px;
             height: 32px;
             border-radius: 6px;
-            border: 2px solid #ffffff;
+            border: 2px solid;
+            /* FOR IE */
+            border-color: #ffffff;
+            /* OTHERS */
+            border-color: var(--white-color);
             background: transparent;
             cursor: pointer;
             display: flex;
@@ -147,7 +163,10 @@ i {
         }
 
         .burger:hover {
+            /* FOR IE */
             border-color: #19e1fc;
+            /* OTHERS */
+            border-color: var(--second-color);
         }
 
         .burger-strip {
@@ -157,7 +176,10 @@ i {
         .strip div {
             height: 2.5px;
             border-radius: 4px;
+            /* FOR IE */
             background: #ffffff;
+            /* OTHERS */
+            background: var(--white-color);
             margin: 4px;
             transition: all .55s cubic-bezier(0.075, 0.82, 0.165, 1);
             width: 20px;
@@ -272,7 +294,10 @@ i {
             }
 
     .hero-action {
-        background-color: #0e55cb;
+        /* FOR IE */
+        background: #0e55cb;
+        /* OTHERS */
+        background: var(--main-color);
     }
     
         .hero-action-container {
@@ -287,18 +312,31 @@ i {
             .hero-action-container h2 {
                 width: 100%;
                 text-align: center;
+                /* FOR IE */
                 color: #ffffff;
+                /* OTHERS */
+                color: var(--white-color);
                 font-size: 3em;
                 font-weight: 800;
             }
 
             .btn-hero-main {
                 font-size: 1.25em;
-                border: 3px solid #ffffff;
+                border: 3px solid;
+                /* FOR IE */
+                border-color: #ffffff;
+                /* OTHERS */
+                border-color: var(--white-color);
                 border-radius: 8px;
+                /* FOR IE */
                 color: #0e55cb;
+                /* OTHERS */
+                color: var(--main-color);
                 font-weight: 800;
+                /* FOR IE */
                 background-color: #ffffff;
+                /* OTHERS */
+                background-color: var(--white-color);
                 padding: 4px 12px;
                 margin: 20px;
                 cursor: pointer;
@@ -306,7 +344,10 @@ i {
             }
 
             .btn-hero-main:hover {
+                /* FOR IE */
                 color: #ffffff;
+                /* OTHERS */
+                color: var(--white-color);
                 background-color: transparent;
             }
 
@@ -357,14 +398,20 @@ i {
         display: block;
         text-align: center;
         font-weight: 800;
-        color: #fff;
+        /* FOR IE */
+        color: #ffffff;
+        /* OTHERS */
+        color: var(--white-color);
         width: 32px;
         max-width: 32px;
         height: 32px;
         border-radius: 50%;
         padding: 8px;
         margin: 0 auto;
+        /* FOR IE */
         background-color: #0e55cb;
+        /* OTHERS */
+        background-color: var(--main-color);
     }
 
     .process-progress .line {
@@ -373,7 +420,10 @@ i {
         height: 100%;
         width: 4px;
         margin: 0 auto;
+        /* FOR IE */
         background-color: #0e55cb;
+        /* OTHERS */
+        background-color: var(--main-color);
 
         z-index: -1;
     }
@@ -395,7 +445,10 @@ i {
         height: 200px;
         margin: 20px;
 
+        /* FOR IE */
         background-color: #ffffff;
+        /* OTHERS */
+        background-color: var(--white-color);
         box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px 0px;
         transition: all .25s;
     }
@@ -539,14 +592,25 @@ i {
         .educational-programs-container th {
             font-size: 1.25em;
             color: #fff;
+            /* FOR IE */
             background-color: #0e55cb;
+            /* OTHERS */
+            background-color: var(--main-color);
             padding: 4px 2px;
-            border: 2px solid #0e55cb;
+            border: 2px solid;
+            /* FOR IE */
+            border-color: #0e55cb;
+            /* OTHERS */
+            border-color: var(--main-color);
             vertical-align: middle;
         }
 
         .educational-programs-container td {
-            border: 2px solid #0e55cb;
+            border: 2px solid;
+            /* FOR IE */
+            border-color: #0e55cb;
+            /* OTHERS */
+            border-color: var(--main-color);
             vertical-align: middle;
             padding: 8px 0;
         }
@@ -559,12 +623,16 @@ i {
             text-align: center;
             margin: 0;
             padding: 10px;
-            border-bottom: 2px solid #0e55cb;
+            border-bottom: 2px solid;
+            /* FOR IE */
+            border-color: #0e55cb;
+            /* OTHERS */
+            border-color: var(--main-color);
         }
 
         .educational-programs-container table span:last-child {
             margin-bottom: 0;
-            border-bottom: 0 solid #0e55cb;
+            border-bottom: 0 solid;
         }
 
         .educational-programs-container table {
@@ -656,7 +724,10 @@ i {
 
 .steps {
     width: 100%;
+    /* FOR IE */
     background-color: #0e55cb;
+    /* OTHERS */
+    background-color: var(--main-color);
 }
 
 .steps-container {
@@ -697,7 +768,10 @@ i {
         .main-steps-subitem {
             font-size: 1.5em;
             font-weight: 700;
+            /* FOR IE */
             color: #ffffff;
+            /* OTHERS */
+            color: var(--white-color);
             padding: 10px;
             text-align: left;
         }
@@ -707,9 +781,15 @@ i {
             width: 25px;
             height: 25px;
             margin: 4px 4px 4px 0;
+            /* FOR IE */
             color: #0e55cb;
+            /* OTHERS */
+            color: var(--main-color);
             border-radius: 25%;
+            /* FOR IE */
             background-color: #ffffff;
+            /* OTHERS */
+            background-color: var(--white-color);
             text-align: center;
         }
 
@@ -720,16 +800,26 @@ i {
             font-weight: 700;
             /* color: rgba(0, 0, 0, 0.8); */
             color: #000000;
-            border: 3px solid #ffffff;
+            border: 3px solid;
+            /* FOR IE */
+            border-color: #ffffff;
+            /* OTHERS */
+            border-color: var(--white-color);
             border-radius: 4px;
+            /* FOR IE */
             background-color: #ffffff;
+            /* OTHERS */
+            background-color: var(--white-color);
             cursor: pointer;
 
             transition: all .5s;
         }
 
         .main-steps-subitem button:active {
+            /* FOR IE */
             color: #0e55cb;
+            /* OTHERS */
+            color: var(--main-color);
         }
 
 .documents-container {
@@ -802,7 +892,10 @@ i {
     }
 
     .cancel-faq .faq-element i {
+        /* FOR IE */
         color: #19e1fc;
+        /* OTHERS */
+        color: var(--second-color);
         rotate: -45deg;
     }
 
@@ -894,7 +987,10 @@ footer {
 
 .modal-cancel {
     font-size: 3em;
-    color: #fff;
+    /* FOR IE */
+    color: #ffffff;
+    /* OTHERS */
+    color: var(--white-color);
     position: fixed;
     top: 0;
     right: 0;
@@ -915,7 +1011,11 @@ footer {
     max-width: 1600px;
     margin: 80px auto;
     min-width: 400px;
-    border: 2px solid #fff;
+    border: 2px solid;
+    /* FOR IE */
+    border-color: #ffffff;
+    /* OTHERS */
+    border-color: var(--white-color);
     z-index: 1;
 
     /* display: none; */
@@ -928,8 +1028,14 @@ footer {
         font-weight: 800;
         display: flex;
         justify-content: center;
-        color: #fff;
+        /* FOR IE */
+        color: #ffffff;
+        /* OTHERS */
+        color: var(--white-color);
+        /* FOR IE */
         background-color: #0e55cb;
+        /* OTHERS */
+        background-color: var(--main-color);
     }
 
         .modal-header img {
@@ -949,8 +1055,14 @@ footer {
     .modal-body {
         width: 100%;
         padding: 20px;
+        /* FOR IE */
         color: #000000;
-        background-color: #fff;
+        /* OTHERS */
+        color: var(--black-color);
+        /* FOR IE */
+        background-color: #ffffff;
+        /* OTHERS */
+        background-color: var(--main-color);
         text-align: center;
         font-family: 'Ubuntu', sans-serif;
     }
@@ -987,22 +1099,43 @@ footer {
 
         .modal-body__form input:focus {
             outline: 0;
-            border: 2px solid #000000;
+            border: 2px solid;
+            /* FOR IE */
+            border-color: #000000;
+            /* OTHERS */
+            border-color: var(--black-color);
         }
 
         .modal-body__form input[type=button] {
             margin-top: 20px;
-            color: #fff;
+            /* FOR IE */
+            color: #ffffff;
+            /* OTHERS */
+            color: var(--white-color);
+            /* FOR IE */
             background-color: #000000;
+            /* OTHERS */
+            background-color: var(--black-color);
             cursor: pointer;
 
             transition: all .3s;
         }
 
         .modal-body__form input[type=button]:hover, .modal-body__form input[type=button]:focus {
-            color: #fff;
+            /* FOR IE */
+            color: #ffffff;
+            /* OTHERS */
+            color: var(--white-color);
             background-color: #0e55cb;
-            border: 2px solid #0e55cb;
+            /* FOR IE */
+            color: #0e55cb;
+            /* OTHERS */
+            color: var(--main-color);
+            border: 2px solid;
+            /* FOR IE */
+            border-color: #0e55cb;
+            /* OTHERS */
+            border-color: var(--main-color);
             cursor: pointer;
         }
 
